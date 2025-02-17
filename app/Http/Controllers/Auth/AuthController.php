@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function showRegisterForm()
+    public function registerForm()
     {
         return view('auth.register');
     }
@@ -32,7 +32,7 @@ class AuthController extends Controller
         return redirect()->route('login');
     }
 
-    public function showLoginForm()
+    public function loginForm()
     {
         return view('auth.login');
     }
