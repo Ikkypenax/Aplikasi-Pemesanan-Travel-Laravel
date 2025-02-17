@@ -7,9 +7,12 @@ use App\Http\Controllers\Admin\RiwayatPenumpangController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Penumpang\PemesananController;
 
+Route::get('register', [AuthController::class, 'showRegisterForm'])->name('register');
+Route::post('register', [AuthController::class, 'register']);
 Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('login', [AuthController::class, 'login'])->name('login.submit');
 Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+
 Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     
     Route::get('jadwal_travel', [JadwalTravelController::class, 'index'])->name('jadwal_travel.index');

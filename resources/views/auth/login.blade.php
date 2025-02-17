@@ -32,8 +32,9 @@
                         </div>
 
                         <div class="d-flex justify-content-between mt-3">
-                            <button type="submit" class="btn btn-primary">Login</button>
+                            <button type="submit" class="btn btn-success">Login</button>
                         </div>
+                        <a href="{{ route('register') }}" class="btn btn-primary mt-2">Register</a>
                     </form>
                 </div>
             </div>
